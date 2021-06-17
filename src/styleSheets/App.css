@@ -41,13 +41,18 @@ header i {
 
 .card-body p {
     font-size: 0.8rem;
+    width: 200px;
 }
 
 .card {
     border: none;
     margin: 2rem;
+    width: 200px;
 }
 
+.card-img-top {
+    height: 100%;
+}
 
 @media screen and (max-width: 450px) {
     header h2 {
