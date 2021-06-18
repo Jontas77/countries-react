@@ -30,9 +30,7 @@ header i {
     height: 27px;
 }
 
-.header-btn {
-    font-size: 2rem;
-}
+
 
 .card-body {
     background-color: hsl(207, 26%, 17%);
@@ -54,16 +52,33 @@ header i {
     height: 100%;
 }
 
+.color-switch {
+    color: hsl(0, 0%, 100%);
+}
+
+.searchBar {
+    width: 30%;
+    height: 40px;
+    margin-top: 1rem;
+    background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+    margin-left: 8rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+
+.search-icon {
+    color: #fff;
+}
+
 @media screen and (max-width: 450px) {
     header h2 {
         font-size: 1rem;
     }
+
+    .searchBar {
+        width: 40%;
+        margin-left: 1rem;
+    }
 }
 
-@media screen and (max-with: 768px) {
-   
-}
-
-@media screen and (min-width: 1440px) {
-    
-}
