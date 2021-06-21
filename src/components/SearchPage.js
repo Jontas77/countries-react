@@ -4,11 +4,11 @@ import CountriesAll from "./CountriesAll";
 const SearchPage = ({ data, searchValue, filter }) => {
   let filteredCountries = data.filter((country) => {
     let result;
-    if (country.region === filter) {
+    if (filter === "All") {
       result =
         country.name.toLowerCase().includes(searchValue.toLowerCase()) ||
         country.capital.toLowerCase().includes(searchValue.toLowerCase());
-    } else if (filter === "All") {
+    } else if (country.region === filter) {
       result =
         country.name.toLowerCase().includes(searchValue.toLowerCase()) ||
         country.capital.toLowerCase().includes(searchValue.toLowerCase());
