@@ -57,18 +57,38 @@ header i {
 }
 
 .searchBar {
-    width: 30%;
+    width: 100%;
     height: 40px;
     margin-top: 1rem;
     background-color: hsl(207, 26%, 17%);
     color: hsl(0, 0%, 100%);
-    margin-left: 8rem;
     border-radius: 5px;
     padding-left: 1rem;
 }
 
+.searchBar::placeholder {
+    color: hsl(0, 0%, 100%);
+}
+
 .search-icon {
     color: #fff;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8rem;
+}
+
+.filter-select {
+    width: 100%;
+    height: 40px;
+    margin-top: 1rem;
+    background-color: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    padding-left: 1rem;
 }
 
 @media screen and (max-width: 450px) {
