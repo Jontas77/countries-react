@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-const CountriesAll = () => {
+const CountriesData = ({ country }) => {
   const [countryList, setCountryList] = useState([]);
-
+  
   useEffect(() => {
     fetch(`https://restcountries.eu/rest/v2/all`)
       .then((response) => response.json())
@@ -19,9 +19,10 @@ const CountriesAll = () => {
     setCountryList(newCountry);
   };
 
+
   return (
     <div className="card-container d-flex flex-wrap flex-row justify-content-center">
-      {countryList.map((country) => {
+      {country.map((country) => {
         const { name, flag, population, region, capital, numericCode } =
           country;
         return (
@@ -60,4 +61,4 @@ const CountriesAll = () => {
   );
 };
 
-export default CountriesAll;
+export default CountriesData;

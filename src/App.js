@@ -1,18 +1,19 @@
 import { useState } from "react";
 import "./styleSheets/App.css";
+import "./styleSheets/country.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import CountriesData from "./data/countriesAll.json";
 
 //Components
 import Header from "./components/Header";
-import Search from "./components/Search";
-// import SearchPage from "./components/SearchPage";
-import Countries from "./components/CountriesAll";
-import Country from "./components/Country";
+import FilterInputs from "./components/FilterInputs";
+import CountryPage from "./components/CountryPage";
+import HomePage from "./components/HomePage";
+
 
 function App() {
   const [searchValue, setSearcValue] = useState("");
-  const [filter, setFilter] = useState(["All"]);
+  const [filter, setFilter] = useState("All");
 
   const handleSearch = (e) => {
     setSearcValue(e.target.value);
@@ -26,20 +27,18 @@ function App() {
     <Router>
         <Header />
         <Route exact path="/">
-          <Search
+          <FilterInputs
             data={CountriesData}
             searchValue={searchValue}
             handleSearch={handleSearch}
             handleFilter={handleFilter}
           />
-          {/* <SearchPage
-            data={CountriesData}
+          <HomePage
             searchValue={searchValue}
             filter={filter}
-          /> */}
-          <Countries />
-        </Route>
-      <Route path="/countries/:name" children={<Country />}></Route>
+          />
+       </Route>
+       <Route path="/countries/:name" children={<CountryPage />}></Route>
     </Router>
   );
 }

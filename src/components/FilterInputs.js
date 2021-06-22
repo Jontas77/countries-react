@@ -1,4 +1,6 @@
-const Search = ({ searchValue, handleSearch, handleFilter }) => {
+import React from "react";
+
+const FilterInputs = ({ searchValue, handleSearch, handleFilter }) => {
   return (
     <div className="filter-container">
       <div className="search">
@@ -29,4 +31,4 @@ const Search = ({ searchValue, handleSearch, handleFilter }) => {
   );
 };
 
-export default Search;
+export default FilterInputs;
