@@ -12,11 +12,11 @@ import HomePage from "./components/HomePage";
 
 
 function App() {
-  const [searchValue, setSearcValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
   const [filter, setFilter] = useState("All");
 
   const handleSearch = (e) => {
-    setSearcValue(e.target.value);
+    setSearchValue(e.target.value);
   };
 
   const handleFilter = (e) => {
